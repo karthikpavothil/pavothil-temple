@@ -18,6 +18,17 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
+    <script>
+        function showstuff(boxid){
+            document.getElementById('about').style.display="none";
+            document.getElementById('services').style.display="none";
+            document.getElementById('menu').style.display="none";
+            document.getElementById('priest').style.display="none";
+            document.getElementById('events').style.display="none";
+            document.getElementById('gallery').style.display="none";
+            document.getElementById(boxid).style.display="block";
+        }
+    </script>
 </head>
     <head>
         <meta charset="utf-8">
@@ -57,7 +68,7 @@ tr:nth-child(even) {
         <script type="text/javascript" src="js/modernizr.custom.79639.min.js"></script>
     </head>
     <body>
-
+    <body onload="showstuff('about')">
         <div class="page-holder">
             <!-- Navbar -->
             <header class="header">
@@ -71,12 +82,12 @@ tr:nth-child(even) {
                         <div id="navigation" class="collapse navbar-collapse navbar-right">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="#hero">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#services">Timing</a></li>
-                                <li><a href="#menu">Vazhipadu List</a></li>
-                                <li><a href="#priest">Priest</a></li>
-                                <li><a href="#events">Events</a></li>
-                                <li><a href="#gallery">Gallery</a></li>
+                                <li><a href="#about" onclick="showstuff('about')">About</a></li>
+                                <li><a href="#services" onclick="showstuff('services')">Timing</a></li>
+                                <li><a href="#menu" onclick="showstuff('menu')">Vazhipadu List</a></li>
+                                <li><a href="#priest" onclick="showstuff('priest')">Priest</a></li>
+                                <li><a href="#events" onclick="showstuff('events')">Events</a></li>
+                                <li><a href="#gallery" onclick="showstuff('gallery')">Gallery</a></li>
                                 <!--<li><a href="#booking">Reservation</a></li>-->
                                 <li><a href="#mainFooter">Contact</a></li>
                             </ul>
